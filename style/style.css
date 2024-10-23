@@ -1,0 +1,167 @@
+body { 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Sfondo chiaro */
+    color: #333; /* Testo scuro per contrasto */
+}
+/*NAV BAR*/
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #34495e; /* Colore navbar */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Ombra per la navbar */
+    height: 37px;
+}
+
+nav a {
+    color: white; /* Colore del testo */
+    padding: 10px 20px; /* Padding per i link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s; /* Transizione per effetto hover */
+    margin: 0 5px; /* Spazio tra i link */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Colore hover */
+}
+
+nav .logo {
+    height: 25px; /* Altezza del logo */
+    margin-right: 20px; /* Spazio tra logo e link */
+}
+
+nav button {
+    color: white;
+    background-color: transparent; /* Sfondo trasparente */
+    border: none; /* Nessun bordo */
+    padding: 10px 20px; /* Padding per i pulsanti */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    margin: 0 5px; /* Spazio tra i pulsanti */
+    transition: background-color 0.3s; /* Transizione per effetto hover */
+}
+
+nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Colore hover */
+}
+
+main {
+    display: flex; /* Usa flexbox per allineare i banner e il contenuto */
+    justify-content: space-between; /* Spazia tra gli elementi */
+    align-items: flex-start; /* Allinea gli elementi all'inizio */
+    padding: 20px; /* Padding generale per il main */
+}
+
+.content {
+    display: flex; /* Usa flexbox per il contenuto */
+    flex-direction: column; /* Colonne per allineare verticalmente */
+    align-items: center; /* Centro gli elementi */
+    justify-content: center; /* Giustifica al centro */
+    padding: 20px; /* Padding per il contenitore del contenuto */
+    max-width: 700px; /* Larghezza massima per il modulo */
+    width: 4900px;
+    text-align: center; /* Testo centrato */
+    background-color: hsla(0, 76%, 95%, 2.902); /* Sfondo bianco traslucido */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombra per il modulo */
+}
+
+.banner {
+    flex: 0 0 230px; /* Larghezza fissa per i banner */
+    height: 350px; /* Altezza fissa per i banner */
+    border: 1px solid red; /* Bordo rosso */
+    margin: 0 10px; /* Margine per i banner */
+    display: flex; /* Per centrare il testo nei banner */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Sfondo bianco per i banner */
+}
+
+form {
+    border-radius: 0px; /* Angoli arrotondati */
+    max-width: 400px; /* Larghezza massima per il modulo */
+    width: 100%; /* Larghezza al 100% fino al massimo */
+    text-align: center; /* Testo centrato */
+    margin: 3px; /* Margine sopra e sotto */
+}
+
+input[type="url"] {
+    width: calc(100% - 20px); /* Larghezza adattiva con padding */
+    padding: 10px;
+    margin: 10px 0; /* Spazio verticale */
+    border: 1px solid #000000; /* Bordo chiaro */
+    border-radius: 4px; /* Angoli arrotondati */
+    font-size: 16px; /* Dimensione del font */
+    background-color:#ffbcbce6;
+}
+
+button {
+    background-color: #3498db; /* Colore del pulsante */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px; /* Angoli arrotondati */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transizione per hover */
+    font-size: 16px; /* Dimensione del font */
+}
+
+button:hover {
+    background-color: #2980b9; /* Colore hover per il pulsante */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Spazio sopra il footer */
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold; /* Risalto per il risultato */
+}
+
+.instructions {
+    margin-top: 10px;
+    font-size: 16px; /* Dimensione del font per le istruzioni */
+}
+
+#instructions a {
+    color: #3498db; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 18px; /* Dimensione del testo */
+    font-weight: bold; /* Rende il testo grassetto */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transizione per il colore e decorazione */
+}
+
+#instructions a:hover {
+    color: #2980b9; /* Cambia il colore al passaggio del mouse */
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Navbar verticale su schermi piccoli */
+    }
+    main {
+        flex-direction: column; /* Layout verticale per schermi piccoli */
+    }
+    .banner {
+        width: 100%; /* Larghezza 100% per i banner in verticale */
+        margin-bottom: 10px; /* Spazio verticale tra i banner */
+    }
+    .content {
+        width: 100%; /* Larghezza 100% per il contenuto */
+        margin: 0; /* Rimuovi margine */
+    }
+}
