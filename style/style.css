@@ -23,7 +23,7 @@ nav a {
     text-decoration: none; /* Rimuove la sottolineatura */
     border-radius: 5px; /* Angoli arrotondati */
     transition: background-color 0.3s; /* Transizione per effetto hover */
-    margin: 0 5px; /* Spazio tra i link */
+    margin: 0 4px; /* Spazio tra i link */
 }
 
 nav a:hover {
