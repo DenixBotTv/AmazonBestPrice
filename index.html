@@ -36,13 +36,21 @@
                 <input type="url" id="amazon_url" name="amazon_url" required placeholder="Inserisci il link qui...">
                 <button type="submit">Cerca</button>
             </form>
-            
-            <div id="result"></div>
-
-            <div id="instructions">
-                <a href="wheretofind.html">Dove trovo il link?</a>
+        </div>
+        
+        <div id="result" style="display: none;">
+            <h2>Link del prodotto generato:</h2>
+            <div class="affiliate-link-container">
+                <a id="affiliateLink" href="#" target="_blank"></a>
             </div>
-        </div>        
+            <div class="button-container">
+                <button id="copyLink">Copia Link</button>
+                <button id="moreInfo">Più Info</button>
+            </div>
+            <div id="extraInfo" style="display: none;"></div>
+        </div>
+        
+
         <div class="banner right-banner">
             <!-- Codice per il banner di Google AdSense -->
             <ins class="adsbygoogle"

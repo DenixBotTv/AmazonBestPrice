@@ -173,3 +173,48 @@ footer {
         margin: 0; /* Rimuovi margine */
     }
 }
+/* Contenitore del link affiliato */
+.affiliate-link-container {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    word-wrap: break-word; /* Permette la divisione del link su più righe */
+}
+
+/* Contenitore dei bottoni */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Bottone singolo */
+.button-container button {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #2980b9;
+}
+
+/* Dettagli aggiuntivi del prodotto */
+#extraInfo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
