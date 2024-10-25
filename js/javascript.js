@@ -10,6 +10,7 @@ document.getElementById("urlForm").addEventListener("submit", function (event) {
 
     // Nasconde il contenitore di inserimento
     document.querySelector('.content').style.display = 'none';
+    
 
     // Mostra il link affiliato con i bottoni
     const resultDiv = document.getElementById("result");
