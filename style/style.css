@@ -68,7 +68,6 @@ main {
 .banner {
     flex: 1 1 230px; /* Larghezza flessibile per i banner */
     height: 200px; /* Altezza fissa per i banner */
-    border: 1px; /* Bordo rosso */
     margin: 10px; /* Margine per i banner */
     display: flex; /* Per centrare il testo nei banner */
     align-items: center;
