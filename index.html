@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Trova il miglior prezzo - Denix</title>
-    <link rel="stylesheet" href="./style/style.css"> <!-- Percorso corretto per il CSS -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- Includi il codice di AdSense -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
-    <header>
-        <h1>THIS IS NOT THE FINAL PRODUCT</h1><!-- Temporaneo -->
+    <header class="header">
+        <h1>THIS IS NOT THE FINAL PRODUCT</h1>
     </header>
-    <nav>
-        <img src="./image/logo.png" alt="Logo" class="logo">
-        <a href="index.html">Best Price</a>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html">
+                <img src="./image/logo.png" alt="Logo" class="logo">
+            </a>
+            <a href="index.html" class="nav-link">Best Price</a>
+        </div>
     </nav>
-    <main>
-        <div class="banner left-banner">
-            <!-- Codice per il banner di Google AdSense -->
+    <main class="main-container">
+        <div class="banner">
+            <!-- Banner Sinistro -->
             <ins class="adsbygoogle"
                  style="display:block; width:200px; height:100px;"
                  data-ad-client=""  
@@ -30,26 +40,36 @@
         <div class="content">
             <h2>Inserisci il link del prodotto Amazon</h2>
             <form id="urlForm">
-                <label for="amazon_url">Link del prodotto:</label>
-                <input type="url" id="amazon_url" name="amazon_url" required placeholder="Inserisci il link qui...">
-                <button type="submit">Cerca</button>
+                <label for="amazon_url" class="form-label">Link del prodotto:</label>
+                <input type="url" id="amazon_url" name="amazon_url" required placeholder="Inserisci il link qui..." class="input-url">
+                <button type="submit" class="btn-primary">Cerca</button>
             </form>
-        </div>
-        
-        <div id="result" style="display: none;">
-            <h2>Link del prodotto generato:</h2>
-            <div class="affiliate-link-container">
-                <a id="affiliateLink" href="#" target="_blank"></a>
-            </div>
-            <div class="button-container">
-                <button id="copyLink">Copia Link</button>
-                <button id="moreInfo">Più Info</button>
-            </div>
-            <div id="extraInfo" style="display: none;"></div>
-        </div>
 
-        <div class="banner right-banner">
-            <!-- Codice per il banner di Google AdSense -->
+            <div id="result" class="result">
+                <h2>Link del prodotto generato:</h2>
+                <div class="affiliate-link-container">
+                    <a id="affiliateLink" href="#" target="_blank" class="affiliate-link"></a>
+                </div>
+                
+                <div class="button-container">
+                    <!-- Bottone Copia Link con popup -->
+                    <div class="btn-wrapper">
+                        <button id="copyLink" class="btn-secondary">Copia Link</button>
+                        <div id="copyMessage" class="copy-popup">Copiato!</div>
+                    </div>
+
+                    <!-- Bottone Più Info (non funzionante) -->
+                    <div class="btn-wrapper">
+                        <button id="moreInfo" class="btn-info">Più Info</button>
+                        <!-- Niente popup per "Più Info" ora -->
+                    </div>
+                </div>
+
+                <div id="extraInfo" class="extra-info"></div>
+            </div>
+        </div>
+        <div class="banner">
+            <!-- Banner Destro -->
             <ins class="adsbygoogle"
                  style="display:block; width:200px; height:100px;"
                  data-ad-client=""  
@@ -60,9 +80,10 @@
             </script>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 Denix. Tutti i diritti riservati.</p>
     </footer>
+
     <script src="js/javascript.js"></script>
 </body>
 </html>

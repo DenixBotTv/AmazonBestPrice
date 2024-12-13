@@ -8,28 +8,32 @@ document.getElementById("urlForm").addEventListener("submit", function (event) {
         ? amazonUrl.replace(/(tag=)[^&]+/, `$1${affiliateTag}`)
         : amazonUrl + (amazonUrl.includes("?") ? "&" : "?") + `tag=${affiliateTag}`;
 
-    // Nasconde il contenitore di inserimento
-    document.querySelector('.content').style.display = 'none';
-    
+    // Nasconde il form
+    document.getElementById("urlForm").style.display = 'none';
 
-    // Mostra il link affiliato con i bottoni
+    // Mostra il risultato
     const resultDiv = document.getElementById("result");
     resultDiv.style.display = 'block';
     document.getElementById("affiliateLink").href = affiliateUrl;
     document.getElementById("affiliateLink").textContent = affiliateUrl;
 
-    // Aggiunge gli event listener per i bottoni
+    // Event listener per il tasto copia
     setupCopyLinkButton(affiliateUrl);
-    setupMoreInfoButton(amazonUrl);
+
+    // Il bottone "Più Info" non fa nulla:
+    // Non chiamiamo più la setupMoreInfoButton
+    // e non attacchiamo alcun event listener.
 });
 
-// Funzione per copiare il link
 function setupCopyLinkButton(affiliateUrl) {
-    document.getElementById("copyLink").addEventListener("click", function () {
+    const copyBtn = document.getElementById("copyLink");
+    const copyMessage = document.getElementById("copyMessage");
+    
+    copyBtn.addEventListener("click", function () {
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(affiliateUrl)
                 .then(() => {
-                    alert("Link copiato negli appunti!");
+                    showPopup(copyMessage);
                 })
                 .catch(err => {
                     console.error("Errore nel copiare il link:", err);
@@ -39,4 +43,12 @@ function setupCopyLinkButton(affiliateUrl) {
             alert("Il tuo browser non supporta la funzione di copia negli appunti.");
         }
     });
+}
+
+// Funzione per mostrare popup
+function showPopup(popupElement) {
+    popupElement.style.display = 'block';
+    setTimeout(() => {
+        popupElement.style.display = 'none';
+    }, 2000);
 }
