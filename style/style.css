@@ -326,16 +326,20 @@ form {
     }
 
     .button-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: start;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .form-label, .result h2 {
         font-size: 0.85rem;
     }
     .btn-primary, .btn-secondary, .btn-info {
         font-size: 0.85rem;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: start;
     }
 }
