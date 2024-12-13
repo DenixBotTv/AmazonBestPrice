@@ -5,11 +5,11 @@
     padding: 0;
 }
 
-/* Font */
+/* Corpo */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #d8ecff;
-    color: #333;
+    background-color: #b8dcff;
+    color: #333333;
 }
 
 /* Header */
@@ -17,8 +17,8 @@ body {
     background-color: #1f2937;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    font-size: small;
+    padding: 20px 0;
+    font-size: 1rem; /* Leggermente ridotto per mantenere proporzioni */
 }
 
 /* Navbar */
@@ -40,7 +40,7 @@ body {
     width: 40px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 60px; /* Aumentato per distanziare il logo dalla scritta Best Price */
+    margin-right: 60px;
 }
 
 .nav-link {
@@ -55,7 +55,7 @@ body {
     color: #1d4ed8; 
 }
 
-/* Banner promozionale sotto la navbar */
+/* Banner Promozionale */
 .banner-promo {
     display: flex;
     justify-content: center;
@@ -65,23 +65,20 @@ body {
     background-color: #fff;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     width: fit-content; 
-    border-radius: 10px;
 }
 
 .promo-img {
     display: block;
-    max-width: 750px; /* imposta la dimensione massima desiderata */
-    width: 100%;      /* l'immagine si adatta al max-width */
+    max-width: 750px; /* Dimensione massima per l'immagine */
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-
-
-/* Layout principale */
+/* Main Container */
 .main-container {
     max-width: 1200px;
-    margin: 60px auto; /* Aumentato top margin per distanziare il contenuto dal logo */
+    margin: 60px auto;
     display: flex;
     gap: 20px;
     padding: 0 20px;
@@ -90,6 +87,7 @@ body {
     justify-content: space-between;
 }
 
+/* Banner laterali */
 .banner {
     flex: 1 1 200px;
     min-width: 200px;
@@ -103,6 +101,7 @@ body {
     padding: 10px;
 }
 
+/* Contenuto Centrale */
 .content {
     flex: 1 1 600px;
     background-color: #ffffff;
@@ -113,7 +112,7 @@ body {
 }
 
 .content h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -211,7 +210,7 @@ form {
 }
 
 .result h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -242,7 +241,7 @@ form {
     flex: 1;
 }
 
-/* Extra info (non serve ora, ma la lasciamo) */
+/* Extra info */
 .extra-info {
     display: none;
     margin-top: 15px;
@@ -255,7 +254,7 @@ form {
     line-height: 1.4;
 }
 
-/* Contenitore bottoni centrati */
+/* Contenitore bottoni */
 .button-container {
     display: flex;
     justify-content: center;
@@ -301,45 +300,99 @@ form {
     text-align: center;
     padding: 10px 0;
     margin-top: 40px;
-    font-size: 0.8rem; /* Riduce la dimensione del font */
+    font-size: 0.8rem;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+/* Tablet */
+@media (max-width: 992px) {
     .navbar-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-    }
-    
-    .main-container {
-        flex-direction: column;
         align-items: center;
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .main-container {
+        margin: 40px auto;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .button-container {
+        margin-top: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .header {
+        font-size: 0.9rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+        gap: 20px;
+        margin: 30px auto;
     }
 
     .banner {
         width: 100%;
         margin-bottom: 20px;
+        height: auto;
+        min-height: 100px;
     }
 
     .content {
         width: 100%;
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .input-url {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .affiliate-link-container {
+        font-size: 0.85rem;
     }
 
     .button-container {
         flex-direction: row;
-        align-items: start;
+        gap: 15px;
+        margin-top: 30px;
     }
-}
 
-@media (max-width: 320px) {
-    .form-label, .result h2 {
+    .btn-secondary, .btn-info {
         font-size: 0.85rem;
+        padding: 8px 12px;
     }
-    .btn-primary, .btn-secondary, .btn-info {
-        font-size: 0.85rem;
-    }
-    .button-container {
-        flex-direction: column;
-        align-items: start;
+
+    .footer {
+        font-size: 0.75rem;
     }
 }
