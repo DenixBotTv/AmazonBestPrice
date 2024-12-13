@@ -8,7 +8,7 @@
 /* Font */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9fafb;
+    background-color: #d8ecff;
     color: #333;
 }
 
@@ -17,7 +17,8 @@ body {
     background-color: #1f2937;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    font-size: small;
 }
 
 /* Navbar */
@@ -53,6 +54,29 @@ body {
 .nav-link:hover {
     color: #1d4ed8; 
 }
+
+/* Banner promozionale sotto la navbar */
+.banner-promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    width: fit-content; 
+    border-radius: 10px;
+}
+
+.promo-img {
+    display: block;
+    max-width: 750px; /* imposta la dimensione massima desiderata */
+    width: 100%;      /* l'immagine si adatta al max-width */
+    height: auto;
+    object-fit: cover;
+}
+
+
 
 /* Layout principale */
 .main-container {
@@ -275,9 +299,9 @@ form {
     background-color: #1f2937;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     margin-top: 40px;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Riduce la dimensione del font */
 }
 
 /* Responsive */
